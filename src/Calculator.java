@@ -186,9 +186,15 @@ private static double applyOperator(char operator, double b, double a) {
     return !text.isEmpty() && isOperator(text.charAt(text.length() - 1));
 }
     @SuppressWarnings("unchecked")
+    
+    
+    
+    
+    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jOptionPane1 = new javax.swing.JOptionPane();
         calculateField = new javax.swing.JTextField();
         answer = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -217,11 +223,14 @@ private static double applyOperator(char operator, double b, double a) {
         jButton24 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Scientific Calculator");
+        setBackground(new java.awt.Color(51, 51, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
         calculateField.setEditable(false);
-        calculateField.setBackground(new java.awt.Color(255, 255, 255));
-        calculateField.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        calculateField.setBackground(new java.awt.Color(204, 204, 204));
+        calculateField.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         calculateField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         calculateField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -229,6 +238,11 @@ private static double applyOperator(char operator, double b, double a) {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 calculateFieldFocusLost(evt);
+            }
+        });
+        calculateField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculateFieldActionPerformed(evt);
             }
         });
         calculateField.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -240,21 +254,24 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        answer.setBackground(new java.awt.Color(255, 255, 255));
-        answer.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        answer.setBackground(new java.awt.Color(204, 255, 153));
+        answer.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         answer.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         answer.setText("0");
+        answer.setOpaque(true);
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(204, 0, 0));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 51, 51));
-        jButton1.setText("C");
+        jButton1.setText("AC");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("7");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -263,7 +280,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 51, 51));
         jButton3.setText("4");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -272,7 +290,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 51, 51));
         jButton4.setText("1");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -281,8 +300,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(51, 51, 51));
+        jButton5.setBackground(new java.awt.Color(102, 255, 255));
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton5.setText("%");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -290,16 +309,18 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton6.setBackground(new java.awt.Color(255, 204, 153));
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton6.setForeground(new java.awt.Color(51, 51, 51));
-        jButton6.setText("/");
+        jButton6.setText("÷");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton7.setBackground(new java.awt.Color(204, 204, 204));
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton7.setForeground(new java.awt.Color(51, 51, 51));
         jButton7.setText("8");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -308,7 +329,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton8.setBackground(new java.awt.Color(204, 204, 204));
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 51, 51));
         jButton8.setText("5");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -317,7 +339,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton9.setBackground(new java.awt.Color(204, 204, 204));
+        jButton9.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 51));
         jButton9.setText("2");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -326,7 +349,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton10.setBackground(new java.awt.Color(204, 204, 204));
+        jButton10.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton10.setForeground(new java.awt.Color(51, 51, 51));
         jButton10.setText("0");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -335,16 +359,18 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton11.setBackground(new java.awt.Color(255, 204, 153));
+        jButton11.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton11.setForeground(new java.awt.Color(51, 51, 51));
-        jButton11.setText("*");
+        jButton11.setText("×");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
             }
         });
 
-        jButton12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton12.setBackground(new java.awt.Color(255, 102, 102));
+        jButton12.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton12.setForeground(new java.awt.Color(51, 51, 51));
         jButton12.setText("Del");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -353,7 +379,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton13.setBackground(new java.awt.Color(255, 204, 153));
+        jButton13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton13.setForeground(new java.awt.Color(51, 51, 51));
         jButton13.setText("-");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -362,7 +389,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton14.setBackground(new java.awt.Color(204, 204, 204));
+        jButton14.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton14.setForeground(new java.awt.Color(51, 51, 51));
         jButton14.setText("9");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -371,7 +399,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton15.setBackground(new java.awt.Color(204, 204, 204));
+        jButton15.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton15.setForeground(new java.awt.Color(51, 51, 51));
         jButton15.setText("6");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -380,7 +409,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton16.setBackground(new java.awt.Color(255, 204, 153));
+        jButton16.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton16.setForeground(new java.awt.Color(51, 51, 51));
         jButton16.setText("+");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -389,7 +419,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton17.setBackground(new java.awt.Color(204, 204, 204));
+        jButton17.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton17.setForeground(new java.awt.Color(51, 51, 51));
         jButton17.setText("3");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -398,7 +429,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton18.setBackground(new java.awt.Color(255, 204, 153));
+        jButton18.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton18.setForeground(new java.awt.Color(51, 51, 51));
         jButton18.setText("=");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
@@ -407,7 +439,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton20.setBackground(new java.awt.Color(204, 204, 204));
+        jButton20.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton20.setForeground(new java.awt.Color(51, 51, 51));
         jButton20.setText(".");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -416,8 +449,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton21.setForeground(new java.awt.Color(51, 51, 51));
+        jButton21.setBackground(new java.awt.Color(102, 255, 255));
+        jButton21.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton21.setText("Cos");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -425,8 +458,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton19.setForeground(new java.awt.Color(51, 51, 51));
+        jButton19.setBackground(new java.awt.Color(102, 255, 255));
+        jButton19.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton19.setText("Sin");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -434,8 +467,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton22.setForeground(new java.awt.Color(51, 51, 51));
+        jButton22.setBackground(new java.awt.Color(102, 255, 255));
+        jButton22.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton22.setText("Tan");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -443,7 +476,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton23.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton23.setBackground(new java.awt.Color(255, 171, 68));
+        jButton23.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton23.setForeground(new java.awt.Color(51, 51, 51));
         jButton23.setText(")");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
@@ -452,7 +486,8 @@ private static double applyOperator(char operator, double b, double a) {
             }
         });
 
-        jButton24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton24.setBackground(new java.awt.Color(255, 171, 68));
+        jButton24.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton24.setForeground(new java.awt.Color(51, 51, 51));
         jButton24.setText("(");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
@@ -465,103 +500,115 @@ private static double applyOperator(char operator, double b, double a) {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(calculateField)
-            .addComponent(answer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(calculateField, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(answer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(calculateField, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(answer, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(answer, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(calculateField, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 16, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         pack();
@@ -702,7 +749,9 @@ private static double applyOperator(char operator, double b, double a) {
       String data = calculateField.getText();
       double result = evaluateExpression(data);
       String finalResult = Double.toString(result);
-      answer.setText(finalResult);
+      answer.setText(calculateField.getText());
+      calculateField.setText(finalResult);
+      
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -757,6 +806,7 @@ private static double applyOperator(char operator, double b, double a) {
         String data = calculateField.getText() + typedChar;
         double result = evaluateExpression(data);
         String finalResult = Double.toString(result);
+        calculateField.setText(finalResult);
         answer.setText(finalResult);
     }
     }//GEN-LAST:event_calculateFieldKeyReleased
@@ -816,6 +866,10 @@ private static double applyOperator(char operator, double b, double a) {
         operatorAdded = true;
     }
     }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void calculateFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_calculateFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -879,5 +933,6 @@ private static double applyOperator(char operator, double b, double a) {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JOptionPane jOptionPane1;
     // End of variables declaration//GEN-END:variables
 }
